@@ -65,8 +65,7 @@ public class Basket {
     public void add(String name, int price, int count, double weight){
         add(name, price, count);
         totalWeight = totalWeight + weight;
-        increaseTotalCount(count);
-        increaseTotalPriceAll(price);
+
     }
 
     public double getTotalWeight(){
@@ -92,6 +91,8 @@ public class Basket {
         items = items + "\n" + name + " - " +
             count + " шт. - " + price;
         totalPrice = totalPrice + count * price;
+        increaseTotalCount(count);
+        increaseTotalPriceAll(price * count);
     }
 
     public void clear() {

@@ -13,6 +13,7 @@ public class Main {
         Basket basket1 = new Basket(100000);
         basket1.add("Milk", 80, 2,2000);
         basket1.add("Chokolate", 1200, 1, 200);
+        basket1.add("Cake", 500, 3, 475);
         basket1.print("John");
         System.out.println("Итоговый вес корзины: " + basket1.getTotalWeight() + " гр.");
         System.out.println("Итоговая сумма покупок в корзине: " + basket1.getTotalPrice() + " руб.");
@@ -25,10 +26,10 @@ public class Main {
         System.out.println("Итоговая сумма покупок в корзине: " + basket2.getTotalPrice() + " руб.");
 
         System.out.println();
-        System.out.println(Basket.calcAveragePricePerBasket());
-        System.out.println(Basket.calcAveragePrice());
-        System.out.println(Basket.getCount());
-        System.out.println(Basket.getTotalPriceAll());
-        System.out.println(Basket.getTotalProductCount());
+        System.out.println("Cредняя сумма покупок в корзине: " + Basket.calcAveragePricePerBasket());
+        System.out.println("Cредняя цена товара в корзине: " + Basket.calcAveragePrice());
+        System.out.println("Количество созданных корзин: " + Basket.getCount());
+        System.out.println("Сумма всех покупок: " + Basket.getTotalPriceAll());
+        System.out.println("Количество купленных товаров: " + Basket.getTotalProductCount());
     }
 }
