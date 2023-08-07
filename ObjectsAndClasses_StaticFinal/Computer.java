@@ -58,7 +58,7 @@ public class Computer {
         this.keyboard = keyboard;
     }
 
-    public int calcTotalWeight(){
+    public double calcTotalWeight(){
         return processor.getWeight() +
                 operativeMemory.getWeight()+
                 hdd.getWeight() +
@@ -76,7 +76,7 @@ public class Computer {
                 "\nДиск: " + hdd.getHDDType() + " " +
                 hdd.getMemory() + " Гб" +
                 "\nМонитор: " + display.getDiag() + " дюймов" + " Тип матрицы: " +
-                display.getMatrixType() + "\nПроизводитель: " +
+                display.getDisplayType() + "\nПроизводитель: " +
                 vendor + "\nНаименование: " + name;
     }
 

@@ -1,28 +1,24 @@
-public enum Display {
-    MON24IPS(24, "IPS", 3000),
-    MON24TN(24, "TN", 4000),
-    MON27IPS(27, "IPS", 6000),
-    MON27VA(27, "VA", 8000);
+public class Display {
 
-    private final int diag;
-    private final String matrixType;
-    private final int weigth;
+    private final double diag;
+    private final DisplayType displayType;
+    private final double weigth;
 
-    Display(int diag, String matrixType, int weigth){
+    Display(double diag, DisplayType displayType, double weigth){
         this.diag = diag;
-        this.matrixType = matrixType;
+        this.displayType = displayType;
         this.weigth = weigth;
     }
 
-    public int getDiag() {
+    public double getDiag() {
         return diag;
     }
 
-    public String getMatrixType() {
-        return matrixType;
+    public DisplayType getDisplayType() {
+        return displayType;
     }
 
-    public int getWeigth() {
+    public double getWeigth() {
         return weigth;
     }
 }

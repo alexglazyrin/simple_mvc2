@@ -1,28 +1,24 @@
-public enum HDD {
-    HDD_500("HDD", 500, 200),
-    HDD_1000("HDD", 1000, 220),
-    SSD_500("SSD", 500, 80),
-    SSD_1000("SSD", 1000, 85);
+public class HDD {
 
-    private final String HDDType;
+    private final HDDType hddType;
     private final int memory;
-    private final int weight;
+    private final double weight;
 
-    HDD(String HDDType, int memory, int weight){
-        this.HDDType = HDDType;
+    HDD(HDDType hddType, int memory, double weight){
+        this.hddType = hddType;
         this.memory = memory;
         this.weight = weight;
     }
 
-    public String getHDDType() {
-        return HDDType;
+    public HDDType getHDDType() {
+        return hddType;
     }
 
     public int getMemory() {
         return memory;
     }
 
-    public int getWeight() {
+    public double getWeight() {
         return weight;
     }
 }

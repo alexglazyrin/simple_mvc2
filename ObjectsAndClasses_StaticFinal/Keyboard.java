@@ -1,28 +1,24 @@
-public enum Keyboard {
-    MECHAN_LED("Mechanical", true, 200),
-    MECHAN_NOLED("Mechanical", false, 150),
-    MEMBRAN_LED("Membrana", true, 150),
-    MEMBRAN_NOLED("Membrana", false, 120);
+public class Keyboard {
 
-    private final String type;
+    private final KeyboardType keyboardType;
     private final boolean isLed;
-    private final int weight;
+    private final double weight;
 
-    Keyboard(String type, boolean isLed, int weight){
-        this.type = type;
+    Keyboard(KeyboardType keyboardType, boolean isLed, double weight){
+        this.keyboardType = keyboardType;
         this.isLed = isLed;
         this.weight = weight;
     }
 
-    public String getType() {
-        return type;
+    public KeyboardType getKeyboardType() {
+        return keyboardType;
     }
 
     public boolean isLed() {
         return isLed;
     }
 
-    public int getWeight() {
+    public double getWeight() {
         return weight;
     }
 }

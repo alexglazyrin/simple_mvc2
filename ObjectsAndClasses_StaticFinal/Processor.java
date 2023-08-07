@@ -1,18 +1,13 @@
-public enum Processor {
-    COREI3(2000, 4, "Intel", 60),
-    COREI5(3000, 6, "Intel", 65),
-    COREI7(4000, 10, "Intel", 70),
-    COREI9(4500, 16, "Intel", 90),
-    RYZEN(3800, 12, "AMD", 70);
+public class Processor {
 
     private final int frequency;
     private final int coreNum;
-    private final String factoryName;
-    private final int weight;
-    Processor(int frequency, int coreNum, String factoryName, int weight){
+    private final ProcessorSeries processorSeries;
+    private final double weight;
+    Processor(int frequency, int coreNum, ProcessorSeries processorSeries, double weight){
         this.frequency = frequency;
         this.coreNum = coreNum;
-        this.factoryName = factoryName;
+        this.processorSeries = processorSeries;
         this.weight = weight;
     }
 
@@ -24,11 +19,11 @@ public enum Processor {
         return coreNum;
     }
 
-    public String getFactoryName() {
-        return factoryName;
+    public ProcessorSeries getFactoryName() {
+        return processorSeries;
     }
 
-    public int getWeight() {
+    public double getWeight() {
         return weight;
     }
 }
